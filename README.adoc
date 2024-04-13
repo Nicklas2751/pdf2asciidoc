@@ -1,0 +1,23 @@
+= pdf2asciidoc: A Docker Container for Converting PDF to AsciiDoc
+
+This repository contains the Dockerfile for `pdf2asciidoc`, a container that converts PDF files to AsciiDoc format using https://github.com/pdfminer/pdfminer.six[pdfminer.six] and https://pandoc.org[pandoc].
+
+== Docker Hub
+
+You can find the Docker container on Docker Hub at `https://hub.docker.com/r/nicklas2751/pdf2asciidoc`.
+
+== Building the Dockerfile
+
+Run the `build.sh`` script to build the Dockerfile.
+
+== Running the Container
+
+To run the container, use the `run.sh` script. The script assumes, that you have a PDF file in the current directory named `myPdf.pdf`. The script will mount it into the container and convert the PDF file to AsciiDoc. The result file will be written to the new directory `output`.
+
+Alternatively, you can run the container manually:
+[source,sh]
+----
+docker run -v ./myPdf.pdf:/input.pdf -v ./output:/output  nicklas2751/pdf2asciidoc:1.0.0
+----
+
+The container expects the input file to be `/input.pdf` and will write the output file to the folder `/output`.

@@ -1,0 +1,1 @@
+docker build -t nicklas2751/pdf2asciidoc:1.0.0 .

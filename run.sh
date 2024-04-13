@@ -1,0 +1,1 @@
+docker run -v ./myPdf.pdf:/input.pdf -v ./output:/output  nicklas2751/pdf2asciidoc:1.0.0
